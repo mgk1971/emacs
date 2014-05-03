@@ -1,11 +1,8 @@
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/custom")
 
+(load "02ruby.el")
 (load "03auto-complete.el")
-;; Setting rbenv path
-(setq rbenv-installation-dir "/usr/local") 
-(setenv "PATH" (concat (getenv "HOME") "/.rbenv/shims:" (getenv "HOME") "/.rbenv/bin:" (getenv "PATH")))
-(setq exec-path (cons (concat (getenv "HOME") "/.rbenv/shims") (cons (concat (getenv "HOME") "/.rbenv/bin") exec-path)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
