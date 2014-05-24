@@ -7,3 +7,7 @@
 ;; Flymake
 (require 'flymake-ruby)
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
+
+;; Projectile rails
+(require 'projectile-rails)
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
