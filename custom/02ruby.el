@@ -11,3 +11,7 @@
 ;; Projectile rails
 (require 'projectile-rails)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
+
+;; Robes mode
+(require 'robe)
+(add-hook 'ruby-mode-hook 'robe-mode)
