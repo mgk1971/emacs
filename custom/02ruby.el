@@ -1,8 +1,6 @@
-;; Setting rbenv path
-(setq rbenv-installation-dir "/usr/local") 
-(setenv "PATH" (concat (getenv "HOME") "/.rbenv/shims:" (getenv "HOME") "/.rbenv/bin:" (getenv "PATH")))
-(setq exec-path (cons (concat (getenv "HOME") "/.rbenv/shims") (cons (concat (getenv "HOME") "/.rbenv/bin") exec-path)))
-(global-rbenv-mode)
+;; rvm
+(require 'rvm)
+(rvm-use-default) ;; use rvm's default ruby for the current Emacs session
 
 ;; Flymake for ruby
 (require 'flymake-ruby)
