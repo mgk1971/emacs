@@ -1,4 +1,6 @@
 (package-initialize)
+;; compile all the files .elc files which has a corresponding newer .el file 
+(byte-recompile-directory "./elpa")
 (add-to-list 'load-path "~/.emacs.d/custom")
 
 (load "02ruby.el")
