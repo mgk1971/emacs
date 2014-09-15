@@ -1,1 +1,0 @@
-("~/Developer/sfemployeecentral/mprepo/" "~/Sites/simple_cms/" "~/.emacs.d/")
