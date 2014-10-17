@@ -26,7 +26,8 @@
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(transient-mark-mode 1)
- '(uniquify-buffer-name-style (quote post-forward) nil (uniquify)))
+ '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
+ '(url-proxy-services (quote (("http" . "proxy:8080")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
