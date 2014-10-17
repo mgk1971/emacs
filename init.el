@@ -1,12 +1,10 @@
 (package-initialize)
-;; compile all the files .elc files which has a corresponding newer .el file 
-(byte-recompile-directory "./elpa")
 
 (add-to-list 'load-path "~/.emacs.d/custom")
-
 (load "01org.el")
-(load "02ruby.el")
-;; (load "03auto-complete.el")
+;;(load "02ruby.el")
+;;(load "03auto-complete.el")
+(load "04dsvn.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -24,10 +22,7 @@
  '(magit-repo-dirs (quote ("/data/sfsf/workspace/wsapi_v1/idl-wsapi_v1-service" "/root/soapUI")))
  '(mark-even-if-inactive t)
  '(menu-bar-mode t)
- '(org-agenda-files (quote ("~/org/gtd.org")))
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
- '(projectile-global-mode t)
- '(projectile-mode-line-lighter " Projectile")
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(transient-mark-mode 1)
