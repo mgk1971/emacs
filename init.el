@@ -1,3 +1,6 @@
+;; The following line is necessary for package magit.el on windows machine
+;; It sets the language to unicode
+(set-language-environment "UTF-8")
 (package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/custom")
