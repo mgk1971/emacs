@@ -9,6 +9,10 @@
 ;;(load "03auto-complete.el")
 (load "04dsvn.el")
 
+;; set up plantuml for use in org files
+(setq org-plantuml-jar-path
+      (expand-file-name "~/.emacs.d/custom/plantuml.jar"))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -26,6 +30,7 @@
  '(mark-even-if-inactive t)
  '(menu-bar-mode t)
  '(org-agenda-files (quote ("~/Mobile Docs/My Documents/org/")))
+ '(org-babel-load-languages (quote ((sh . t) (plantuml . t) (emacs-lisp . t))))
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
