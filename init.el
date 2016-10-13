@@ -29,7 +29,7 @@
  '(magit-repo-dirs (quote ("~/.emacs.d")))
  '(mark-even-if-inactive t)
  '(menu-bar-mode t)
- '(org-agenda-files (quote ("~/Mobile Docs/My Documents/org/")))
+ '(org-agenda-files (quote ("~/org/")))
  '(org-babel-load-languages (quote ((sh . t) (plantuml . t) (emacs-lisp . t))))
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(scroll-bar-mode nil)
