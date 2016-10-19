@@ -26,7 +26,7 @@
  '(grep-find-ignored-directories (quote ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".DS_Store")))
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido))
- '(magit-repo-dirs (quote ("~/.emacs.d")))
+ '(magit-repo-dirs (quote ("~/.emacs.d" "C:\\Canberra\\scripts")))
  '(mark-even-if-inactive t)
  '(menu-bar-mode t)
  '(org-agenda-files (quote ("~/org/")))
