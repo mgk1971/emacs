@@ -18,25 +18,39 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes (quote (adwaita)))
  '(delete-selection-mode nil)
  '(dired-dwim-target t)
  '(global-auto-complete-mode t)
- '(grep-find-ignored-directories (quote ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".DS_Store")))
+ '(grep-find-ignored-directories
+   (quote
+    ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".DS_Store")))
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido))
- '(magit-repo-dirs (quote ("~/.emacs.d")))
+ '(magit-repo-dirs (quote ("~/.emacs.d" "C:\\Canberra\\scripts")))
  '(mark-even-if-inactive t)
  '(menu-bar-mode t)
  '(org-agenda-files (quote ("~/org/")))
  '(org-babel-load-languages (quote ((sh . t) (plantuml . t) (emacs-lisp . t))))
- '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
+ '(org-mobile-files (quote ("~/Dropbox/org")))
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa" . "http://melpa.milkbox.net/packages/")
+     ("marmalade" . "http://marmalade-repo.org/packages/"))))
+ '(package-selected-packages (quote (magit-gitflow)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(transient-mark-mode 1)
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
- '(url-proxy-services (quote (("http" . "proxy:8080")))))
+ '(url-cookie-file "c:/Users/d032297/.emacs.d/url/cookies")
+ '(url-history-file "c:/Users/d032297/.emacs.d/url/history")
+ '(url-proxy-services
+   (quote
+    (("http" . "proxy.wdf.sap.corp:8080")
+     ("https" . "proxy.wdf.sap.corp:8080")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

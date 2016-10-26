@@ -1,0 +1,4 @@
+alias find c:/Program\ Files/Git/usr/bin/find.exe $*
+alias ll ls -la $*
+alias ff find-file $1
+alias d dired $1
