@@ -29,7 +29,12 @@
     ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".DS_Store")))
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido))
- '(magit-repo-dirs (quote ("~/.emacs.d" "C:\\Canberra\\scripts")))
+ '(magit-repository-directories
+   (quote
+    (("~/.emacs.d" . 0)
+     ("~/Developer/sfengservices/sf-dev3" . 0)
+     ("~/Developer/sfengservices/bizxdev-hugo" . 0)     
+     ("C:\\Canberra\\scripts"))))
  '(mark-even-if-inactive t)
  '(menu-bar-mode t)
  '(org-agenda-files (quote ("~/org/")))
@@ -40,7 +45,7 @@
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "http://melpa.milkbox.net/packages/")
      ("marmalade" . "http://marmalade-repo.org/packages/"))))
- '(package-selected-packages (quote (magit-gitflow)))
+ '(package-selected-packages (quote (markdown-mode+ markdown-mode magit-gitflow)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(transient-mark-mode 1)
