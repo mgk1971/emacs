@@ -49,8 +49,7 @@
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
-     ("melpa" . "http://melpa.milkbox.net/packages/")
-     ("sunrise elpa" . "http://joseito.republika.pl/sunrise-commander/"))))
+     ("melpa" . "http://melpa.milkbox.net/packages/"))))
  '(package-selected-packages (quote ("hugo" markdown-mode+ markdown-mode magit-gitflow)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
