@@ -9,9 +9,8 @@
 ;;(load "03auto-complete.el")
 ;;(load "04dsvn.el")
 
-;; set up plantuml for use in org files
-(setq org-plantuml-jar-path
-      (expand-file-name "~/.emacs.d/custom/plantuml.jar"))
+(require 'evil)
+(evil-mode 1)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -25,10 +24,12 @@
  '(custom-enabled-themes (quote (misterioso)))
  '(custom-safe-themes
    (quote
-    ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
+    ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" default)))
  '(delete-selection-mode nil)
  '(dired-dwim-target t)
- '(global-auto-complete-mode t)
+ '(flx-ido-mode t)
+ '(font-use-system-font t)
+ '(global-company-mode t)
  '(grep-find-ignored-directories
    (quote
     ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".DS_Store")))
@@ -45,7 +46,8 @@
  '(org-agenda-files (quote ("~/org/")))
  '(org-babel-load-languages (quote ((sh . t) (plantuml . t) (emacs-lisp . t))))
  '(org-export-backends (quote (html md)))
- '(org-mobile-files (quote ("~/Dropbox/org")))
+ '(org-agenda-files (quote ("~/org")))
+ '(org-babel-load-languages (quote ((plantuml . t) (emacs-lisp . t))))
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
@@ -60,7 +62,8 @@
  '(url-proxy-services
    (quote
     (("http" . "proxy.wdf.sap.corp:8080")
-     ("https" . "proxy.wdf.sap.corp:8080")))))
+     ("https" . "proxy.wdf.sap.corp:8080"))))
+ '(uniquify-buffer-name-style (quote post-forward) nil (uniquify)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
