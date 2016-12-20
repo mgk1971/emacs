@@ -36,15 +36,15 @@
     ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".DS_Store")))
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido))
+ '(inhibit-startup-screen t)
+ '(linum-relative-current-symbol "")
+ '(linum-relative-global-mode t)
  '(magit-repository-directories
    (quote
     (("~/.emacs.d" . 0)
      ("~/Developer/sfengservices/sf-dev3" . 0)
      ("~/Developer/sfengservices/bizxdev-hugo" . 0)
      ("C:\\Canberra\\scripts"))))
- '(inhibit-startup-screen t)
- '(linum-relative-current-symbol "")
- '(linum-relative-global-mode t)
  '(mark-even-if-inactive t)
  '(org-agenda-files (quote ("n:\\My Documents\\org\\")))
  '(org-babel-load-languages (quote ((plantuml . t) (emacs-lisp . t))))
@@ -54,6 +54,10 @@
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "http://melpa.milkbox.net/packages/"))))
  '(package-selected-packages (quote ("hugo" markdown-mode+ markdown-mode magit-gitflow)))
+ '(projectile-mode t nil (projectile))
+ '(projectile-project-root-files
+   (quote
+    ("rebar.config" "project.clj" "build.boot" "SConstruct" "pom.xml" "build.sbt" "gradlew" "build.gradle" ".ensime" "Gemfile" "requirements.txt" "setup.py" "tox.ini" "gulpfile.js" "Gruntfile.js" "bower.json" "composer.json" "Cargo.toml" "mix.exs" "stack.yaml" "info.rkt" "DESCRIPTION" "TAGS" "GTAGS" ".git")))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
