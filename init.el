@@ -30,6 +30,7 @@
  '(flx-ido-mode t)
  '(font-use-system-font t)
  '(global-company-mode t)
+ '(global-relative-line-numbers-mode t)
  '(grep-find-ignored-directories
    (quote
     ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".DS_Store")))
@@ -41,6 +42,9 @@
      ("~/Developer/sfengservices/sf-dev3" . 0)
      ("~/Developer/sfengservices/bizxdev-hugo" . 0)
      ("C:\\Canberra\\scripts"))))
+ '(inhibit-startup-screen t)
+ '(linum-relative-current-symbol "")
+ '(linum-relative-global-mode t)
  '(mark-even-if-inactive t)
  '(org-agenda-files (quote ("n:\\My Documents\\org\\")))
  '(org-babel-load-languages (quote ((plantuml . t) (emacs-lisp . t))))

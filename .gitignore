@@ -6,3 +6,6 @@ auto-save-list/
 /server/
 eshell/history
 eshell/lastdir
+/ido.last
+/projectile.cache
+/tramp
