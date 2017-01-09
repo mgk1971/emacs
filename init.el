@@ -9,9 +9,6 @@
 ;;(load "03auto-complete.el")
 ;;(load "04dsvn.el")
 
-(require 'evil)
-(evil-mode 1)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -42,8 +39,6 @@
  '(magit-repository-directories
    (quote
     (("~/.emacs.d" . 0)
-     ("~/Developer/sfengservices/sf-dev3" . 0)
-     ("~/Developer/sfengservices/bizxdev-hugo" . 0)
      ("C:\\Canberra\\scripts"))))
  '(mark-even-if-inactive t)
  '(org-agenda-files (quote ("n:\\My Documents\\org\\")))
@@ -52,12 +47,7 @@
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
-     ("melpa" . "http://melpa.milkbox.net/packages/"))))
- '(package-selected-packages (quote ("hugo" markdown-mode+ markdown-mode magit-gitflow)))
- '(projectile-mode t nil (projectile))
- '(projectile-project-root-files
-   (quote
-    ("rebar.config" "project.clj" "build.boot" "SConstruct" "pom.xml" "build.sbt" "gradlew" "build.gradle" ".ensime" "Gemfile" "requirements.txt" "setup.py" "tox.ini" "gulpfile.js" "Gruntfile.js" "bower.json" "composer.json" "Cargo.toml" "mix.exs" "stack.yaml" "info.rkt" "DESCRIPTION" "TAGS" "GTAGS" ".git")))
+     ("melpa" . "http://melpa.org/packages/"))))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
@@ -73,3 +63,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 113 :width normal)))))
+
+(eval-when-compile
+  (require 'use-package))
+
+(use-package magit
+  :ensure t)
+
+(use-package evil
+  :ensure t
+  :config
+  (evil-mode 1))
