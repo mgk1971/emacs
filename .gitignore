@@ -1,11 +1,11 @@
 *.elc
 *.eld
-auto-save-list/
 *~
-/ac-comphist.dat
-/server/
+\#*\#
+ac-comphist.dat
+elpa/
+ido.last
 eshell/history
 eshell/lastdir
-/ido.last
-/projectile.cache
-/tramp
+server/
+auto-save-list/
