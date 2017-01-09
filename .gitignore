@@ -3,7 +3,9 @@
 *~
 \#*\#
 ac-comphist.dat
+ido.last
 elpa/
-eshell/
+eshell/history
+eshell/lastdir
 server/
 auto-save-list/
