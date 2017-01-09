@@ -1,6 +1,8 @@
 *.elc
 *.eld
-auto-save-list/
+auto-save-list
 *~
-/ac-comphist.dat
-/elpa/*
+ac-comphist.dat
+elpa
+eshell/
+server/
