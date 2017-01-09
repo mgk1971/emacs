@@ -16,13 +16,9 @@
  '(custom-enabled-themes (quote (misterioso)))
  '(delete-selection-mode nil)
  '(dired-dwim-target t)
- '(global-auto-complete-mode t)
  '(grep-find-ignored-directories
    (quote
     ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".DS_Store")))
- '(ido-enable-flex-matching t)
- '(ido-mode (quote both) nil (ido))
- '(ido-use-filename-at-point (quote guess))
  '(inhibit-startup-screen t)
  '(mark-even-if-inactive t)
  '(menu-bar-mode t)
@@ -55,3 +51,26 @@
   :ensure t
   :config
   (evil-mode 1))
+
+(use-package company
+  :ensure t
+  :config
+  (global-company-mode 1))
+
+(use-package linum-relative
+  :ensure t
+  :config
+  (linum-relative-global-mode 1)
+  (setq linum-relative-current-symbol ""))
+
+(use-package projectile
+  :ensure t
+  :config
+  (projectile-mode 1))
+
+(use-package ido
+  :config
+  (setq ido-enable-flex-matching t
+	ido-everywhere t
+	ido-use-filename-at-point 'guess)
+  (ido-mode 1))
