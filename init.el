@@ -44,6 +44,26 @@
 (eval-when-compile
   (require 'use-package))
 
+;; ag is the silver searcher
+;; see http://agel.readthedocs.io/en/latest/usage.html
+(use-package ag
+  :ensure t)
+
+(use-package company
+  :ensure t
+  :config
+  (global-company-mode 1))
+
+(use-package flx-ido
+  :ensure t
+  :config
+  (flx-ido-mode 1))
+
+(use-package helm
+  :ensure t
+  :config
+  (helm-mode 1))
+
 (use-package magit
   :ensure t)
 
@@ -51,11 +71,6 @@
   :ensure t
   :config
   (evil-mode 1))
-
-(use-package company
-  :ensure t
-  :config
-  (global-company-mode 1))
 
 (use-package linum-relative
   :ensure t
@@ -70,12 +85,6 @@
 
 (use-package ido
   :config
-  (setq ido-enable-flex-matching t
-	ido-everywhere t
+  (setq	ido-everywhere t
 	ido-use-filename-at-point 'guess)
   (ido-mode 1))
-
-;; ag is the silver searcher
-;; see http://agel.readthedocs.io/en/latest/usage.html
-(use-package ag
-  :ensure t)
