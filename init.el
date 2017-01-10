@@ -24,18 +24,10 @@
     ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" default)))
  '(delete-selection-mode nil)
  '(dired-dwim-target t)
- '(flx-ido-mode t)
- '(font-use-system-font t)
- '(global-company-mode t)
- '(global-relative-line-numbers-mode t)
  '(grep-find-ignored-directories
    (quote
     ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".DS_Store")))
- '(ido-enable-flex-matching t)
- '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
- '(linum-relative-current-symbol "")
- '(linum-relative-global-mode t)
  '(magit-repository-directories
    (quote
     (("~/.emacs.d" . 0)
@@ -74,3 +66,26 @@
   :ensure t
   :config
   (evil-mode 1))
+
+(use-package company
+  :ensure t
+  :config
+  (global-company-mode 1))
+
+(use-package linum-relative
+  :ensure t
+  :config
+  (linum-relative-global-mode 1)
+  (setq linum-relative-current-symbol ""))
+
+(use-package projectile
+  :ensure t
+  :config
+  (projectile-mode 1))
+
+(use-package ido
+  :config
+  (setq ido-enable-flex-matching t
+	ido-everywhere t
+	ido-use-filename-at-point 'guess)
+  (ido-mode 1))
