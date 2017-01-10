@@ -74,3 +74,8 @@
 	ido-everywhere t
 	ido-use-filename-at-point 'guess)
   (ido-mode 1))
+
+;; ag is the silver searcher
+;; see http://agel.readthedocs.io/en/latest/usage.html
+(use-package ag
+  :ensure t)
