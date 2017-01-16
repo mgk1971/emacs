@@ -41,6 +41,11 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; use-package configuration
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
 (eval-when-compile
   (require 'use-package))
 
@@ -61,6 +66,10 @@
 
 (use-package helm
   :ensure t
+  :bind (("M-x" . helm-M-x)
+	 ("C-x C-f" . helm-find-files)
+	 ("C-x b" . helm-mini)
+	 )
   :config
   (helm-mode 1))
 
@@ -81,7 +90,10 @@
 (use-package projectile
   :ensure t
   :config
-  (projectile-mode 1))
+  (projectile-mode 1)
+  (setq projectile-completion-system 'helm 
+	helm-projectile-fuzzy-match nil)
+  (helm-projectile-on))
 
 (use-package ido
   :config
