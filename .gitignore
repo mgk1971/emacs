@@ -9,3 +9,5 @@ eshell/history
 eshell/lastdir
 server/
 auto-save-list/
+/tramp
+/projectile.cache

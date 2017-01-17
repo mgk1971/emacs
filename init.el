@@ -56,8 +56,37 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 113 :width normal)))))
 
+;; use-package configuration
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
 (eval-when-compile
   (require 'use-package))
+
+;; ag is the silver searcher
+;; see http://agel.readthedocs.io/en/latest/usage.html
+(use-package ag
+  :ensure t)
+
+(use-package company
+  :ensure t
+  :config
+  (global-company-mode 1))
+
+(use-package flx-ido
+  :ensure t
+  :config
+  (flx-ido-mode 1))
+
+(use-package helm
+  :ensure t
+  :bind (("M-x" . helm-M-x)
+	 ("C-x C-f" . helm-find-files)
+	 ("C-x b" . helm-mini)
+	 )
+  :config
+  (helm-mode 1))
 
 (use-package magit
   :ensure t)
@@ -66,11 +95,6 @@
   :ensure t
   :config
   (evil-mode 1))
-
-(use-package company
-  :ensure t
-  :config
-  (global-company-mode 1))
 
 (use-package linum-relative
   :ensure t
@@ -81,11 +105,13 @@
 (use-package projectile
   :ensure t
   :config
-  (projectile-mode 1))
+  (projectile-mode 1)
+  (setq projectile-completion-system 'helm 
+	helm-projectile-fuzzy-match nil)
+  (helm-projectile-on))
 
 (use-package ido
   :config
-  (setq ido-enable-flex-matching t
-	ido-everywhere t
+  (setq	ido-everywhere t
 	ido-use-filename-at-point 'guess)
   (ido-mode 1))
