@@ -74,11 +74,6 @@
   :config
   (global-company-mode 1))
 
-(use-package flx-ido
-  :ensure t
-  :config
-  (flx-ido-mode 1))
-
 (use-package helm
   :ensure t
   :bind (("M-x" . helm-M-x)
@@ -86,32 +81,36 @@
 	 ("C-x b" . helm-mini)
 	 )
   :config
-  (helm-mode 1))
+  (helm-mode 1)
+  )
+
+(use-package helm-projectile
+  :ensure t
+  :config
+  (helm-projectile-on)
+;;  (setq helm-projectile-fuzzy-match nil)
+  )
 
 (use-package magit
-  :ensure t)
+  :ensure t
+  )
 
 (use-package evil
   :ensure t
   :config
-  (evil-mode 1))
+  (evil-mode 1)
+  )
 
 (use-package linum-relative
   :ensure t
   :config
   (linum-relative-global-mode 1)
-  (setq linum-relative-current-symbol ""))
+  (setq linum-relative-current-symbol "")
+  )
 
 (use-package projectile
   :ensure t
   :config
   (projectile-mode 1)
-  (setq projectile-completion-system 'helm 
-	helm-projectile-fuzzy-match nil)
-  (helm-projectile-on))
-
-(use-package ido
-  :config
-  (setq	ido-everywhere t
-	ido-use-filename-at-point 'guess)
-  (ido-mode 1))
+  (setq projectile-completion-system 'helm)
+  ) 
