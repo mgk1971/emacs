@@ -3,12 +3,6 @@
 (set-language-environment "UTF-8")
 (package-initialize)
 
-(add-to-list 'load-path "~/.emacs.d/custom")
-(load "01org.el")
-;;(load "02ruby.el")
-;;(load "03auto-complete.el")
-;;(load "04dsvn.el")
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -33,9 +27,6 @@
     (("~/.emacs.d" . 0)
      ("C:\\Canberra\\scripts"))))
  '(mark-even-if-inactive t)
- '(org-agenda-files (quote ("n:\\My Documents\\org\\")))
- '(org-babel-load-languages (quote ((plantuml . t) (emacs-lisp . t))))
- '(org-export-backends (quote (html md)))
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
@@ -45,10 +36,7 @@
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
  '(url-cookie-file "c:/Users/d032297/.emacs.d/url/cookies")
  '(url-history-file "c:/Users/d032297/.emacs.d/url/history")
- '(url-proxy-services
-   (quote
-    (("http" . "proxy.wdf.sap.corp:8080")
-     ("https" . "proxy.wdf.sap.corp:8080")))))
+)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -56,6 +44,7 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 113 :width normal)))))
 
+;;;;;;;;;; Own Configurations
 ;; use-package configuration
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -64,8 +53,17 @@
 (eval-when-compile
   (require 'use-package))
 
+(add-to-list 'load-path "~/.emacs.d/custom")
+(load "my_proxy")
+(load "my_org")
+(load "my_helm")
+;;(load "my_ido")
+(load "my_projectile")
+;;(load "my_ruby")
+
 ;; ag is the silver searcher
-;; see http://agel.readthedocs.io/en/latest/usage.html
+;; see http://agel.readthedocs.io
+;; apt-get install silversearcher-ag
 (use-package ag
   :ensure t)
 
@@ -74,22 +72,6 @@
   :config
   (global-company-mode 1))
 
-(use-package helm
-  :ensure t
-  :bind (("M-x" . helm-M-x)
-	 ("C-x C-f" . helm-find-files)
-	 ("C-x b" . helm-mini)
-	 )
-  :config
-  (helm-mode 1)
-  )
-
-(use-package helm-projectile
-  :ensure t
-  :config
-  (helm-projectile-on)
-;;  (setq helm-projectile-fuzzy-match nil)
-  )
 
 (use-package magit
   :ensure t
@@ -108,9 +90,3 @@
   (setq linum-relative-current-symbol "")
   )
 
-(use-package projectile
-  :ensure t
-  :config
-  (projectile-mode 1)
-  (setq projectile-completion-system 'helm)
-  ) 
