@@ -56,8 +56,8 @@
 (add-to-list 'load-path "~/.emacs.d/custom")
 (load "my_proxy")
 (load "my_org")
-(load "my_helm")
-;;(load "my_ido")
+;;(load "my_helm")
+(load "my_ido")
 (load "my_projectile")
 ;;(load "my_ruby")
 
@@ -71,7 +71,6 @@
   :ensure t
   :config
   (global-company-mode 1))
-
 
 (use-package magit
   :ensure t
