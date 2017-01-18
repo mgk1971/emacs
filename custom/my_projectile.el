@@ -15,4 +15,7 @@
     (helm-projectile-on)
     ;;  (setq helm-projectile-fuzzy-match nil)
     )
+  (use-package helm-ag
+    :ensure t
+    )
   )
