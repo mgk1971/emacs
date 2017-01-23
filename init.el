@@ -51,6 +51,7 @@
 (load "my_ido")
 (load "my_projectile")
 ;;(load "my_ruby")
+(load "my_yaml")
 
 ;; ag is the silver searcher
 ;; see http://agel.readthedocs.io
