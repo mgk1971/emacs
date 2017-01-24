@@ -36,6 +36,10 @@
  '(default ((t (:family "Consolas" :foundry "outline" :slant normal :weight normal :height 113 :width normal)))))
 
 ;;;;;;;;;; Own Configurations
+
+(add-to-list 'load-path "~/.emacs.d/custom")
+;;(load "my_proxy")
+
 ;; use-package configuration
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -44,14 +48,12 @@
 (eval-when-compile
   (require 'use-package))
 
-(add-to-list 'load-path "~/.emacs.d/custom")
-(load "my_proxy")
 (load "my_org")
 (load "my_evil")
 ;;(load "my_helm")
 (load "my_ido")
 (load "my_projectile")
-;;(load "my_ruby")
+(load "my_ruby")
 (load "my_yaml")
 
 ;; ag is the silver searcher
