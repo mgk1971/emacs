@@ -47,6 +47,7 @@
 (add-to-list 'load-path "~/.emacs.d/custom")
 (load "my_proxy")
 (load "my_org")
+(load "my_evil")
 ;;(load "my_helm")
 (load "my_ido")
 (load "my_projectile")
@@ -68,11 +69,7 @@
   :ensure t
   )
 
-(use-package evil
-  :ensure t
-  :config
-  (evil-mode 1)
-  )
+
 
 (use-package linum-relative
   :ensure t
