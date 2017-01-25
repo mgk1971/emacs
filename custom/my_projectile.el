@@ -4,15 +4,20 @@
   :config
   (projectile-mode 1)
   (if (package-installed-p 'helm)
-      (setq projectile-completion-system 'helm)
+      (progn
+	(setq projectile-completion-system 'helm)
+	(use-package helm-ag
+	  :ensure t
+	  )
+	)
     )
   ) 
 
-(if (package-installed-p 'helm)
-  (use-package helm-projectile
-    :ensure t
-    :config
-    (helm-projectile-on)
-    ;;  (setq helm-projectile-fuzzy-match nil)
-    )
+(use-package helm-projectile
+  :if (package-installed-p 'helm)
+  :ensure t
+  :config
+  (helm-projectile-on)
+  ;;  (setq helm-projectile-fuzzy-match nil)
   )
+
