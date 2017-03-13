@@ -49,7 +49,9 @@
   (require 'use-package))
 
 (load "my_org")
+(load "my_evil")
 ;;(load "my_helm")
+(load "my_evil")
 (load "my_ido")
 (load "my_projectile")
 (load "my_ruby")
@@ -68,12 +70,6 @@
 
 (use-package magit
   :ensure t
-  )
-
-(use-package evil
-  :ensure t
-  :config
-  (evil-mode 1)
   )
 
 (use-package linum-relative
