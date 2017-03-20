@@ -16,6 +16,10 @@
     (define-key evil-normal-state-map (kbd "\\relv") 'ruby-refactor-extract-local-variable)
     (define-key evil-normal-state-map (kbd "\\rec") 'ruby-refactor-extract-constant)
     (define-key evil-normal-state-map (kbd "\\rap") 'ruby-refactor-add-parameter)
+    (define-key evil-normal-state-map (kbd ",f") 'projectile-find-file)
+    (define-key evil-normal-state-map (kbd ",v") 'projectile-vc)
+    (define-key evil-normal-state-map (kbd ",p") 'helm-projectile-switch-project)
+    (define-key evil-normal-state-map (kbd ",ss") 'helm-projectile-ag)
     )
 
   (define-key evil-normal-state-map (kbd "q") nil)
