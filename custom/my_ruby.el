@@ -13,3 +13,9 @@
   :config
   (add-hook 'enh-ruby-mode-hook 'robe-mode)
   )
+
+(use-package ruby-refactor
+  :ensure t
+  :config
+  (add-hook 'enh-ruby-mode-hook 'ruby-refactor-mode-launch)
+  )
