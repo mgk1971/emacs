@@ -29,9 +29,16 @@
 
 ;; Evil surround
 ;; see https://github.com/timcharper/evil-surround
-
 (use-package evil-surround
   :ensure t
   :config
   (global-evil-surround-mode 1)
+  )
+
+;; Evel powerline
+(use-package powerline-evil
+  :ensure t
+  :config
+  (powerline-evil-vim-color-theme)
+  (display-time-mode t)
   )
