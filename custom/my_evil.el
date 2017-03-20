@@ -4,10 +4,13 @@
   :config
   (evil-mode 1)
   (define-key evil-normal-state-map (kbd ",,") 'evil-buffer)
-  (define-key evil-normal-state-map (kbd ",f") 'projectile-find-file)
-  (define-key evil-normal-state-map (kbd ",v") 'projectile-vc)
-  (define-key evil-normal-state-map (kbd ",p") 'helm-projectile-switch-project)
-  (define-key evil-normal-state-map (kbd ",ss") 'helm-projectile-ag)
+  (when (package-installed-p 'projectile)
+    (define-key evil-normal-state-map (kbd ",f") 'projectile-find-file)
+    (define-key evil-normal-state-map (kbd ",v") 'projectile-vc)
+    (define-key evil-normal-state-map (kbd ",p") 'helm-projectile-switch-project)
+    (define-key evil-normal-state-map (kbd ",ss") 'helm-projectile-ag)
+    )
+
   (define-key evil-normal-state-map (kbd "q") nil)
   (define-key evil-normal-state-map (kbd "M-.") nil)
 
