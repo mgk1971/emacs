@@ -12,7 +12,7 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(custom-enabled-themes (quote (misterioso)))
+ '(custom-enabled-themes (quote (leuven)))
  '(custom-safe-themes
    (quote
     ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" default)))
@@ -62,8 +62,8 @@
 (load "my_evil")
 (load "my_ido")
 (load "my_projectile")
-;;(load "my_ruby")
-;;(load "my_yaml")
+(load "my_ruby")
+(load "my_yaml")
 
 ;; ag is the silver searcher
 ;; see http://agel.readthedocs.io

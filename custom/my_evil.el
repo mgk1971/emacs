@@ -3,7 +3,28 @@
   :ensure t
   :config
   (evil-mode 1)
-  (define-key evil-normal-state-map "q" nil) 
+  (define-key evil-normal-state-map (kbd ",,") 'evil-buffer)
+  (when (package-installed-p 'projectile)
+    (define-key evil-normal-state-map (kbd "\\pf") 'projectile-find-file)
+    (define-key evil-normal-state-map (kbd "\\pv") 'projectile-vc)
+    (define-key evil-normal-state-map (kbd "\\pp") 'helm-projectile-switch-project)
+    (define-key evil-normal-state-map (kbd "\\pss") 'helm-projectile-ag)
+    )
+
+  (when (package-installed-p 'ruby-refactor)
+    (define-key evil-normal-state-map (kbd "\\rem") 'ruby-refactor-extract-to-method)
+    (define-key evil-normal-state-map (kbd "\\relv") 'ruby-refactor-extract-local-variable)
+    (define-key evil-normal-state-map (kbd "\\rec") 'ruby-refactor-extract-constant)
+    (define-key evil-normal-state-map (kbd "\\rap") 'ruby-refactor-add-parameter)
+    )
+
+  (define-key evil-normal-state-map (kbd "q") nil)
+  (define-key evil-normal-state-map (kbd "M-.") nil)
+
+  (define-key evil-insert-state-map (kbd "C-e") nil)
+  (define-key evil-insert-state-map (kbd "C-d") nil)
+  (define-key evil-insert-state-map (kbd "C-k") nil)
+
   )
 
 ;; Evil surround
