@@ -25,9 +25,9 @@
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "http://melpa.org/packages/"))))
  '(scroll-bar-mode nil)
+ '(sentence-end-double-space nil)
  '(tool-bar-mode nil)
- '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
-)
+ '(uniquify-buffer-name-style (quote post-forward) nil (uniquify)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
