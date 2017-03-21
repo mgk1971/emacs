@@ -9,6 +9,7 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(company-global-modes (quote (not inf-ruby)))
  '(custom-enabled-themes (quote (leuven)))
  '(custom-safe-themes
    (quote
@@ -50,7 +51,7 @@
 
 (load "my_org")
 ;;(load "my_helm")
-(load "my_evil")
+;;(load "my_evil")
 (load "my_ido")
 (load "my_projectile")
 (load "my_ruby")
