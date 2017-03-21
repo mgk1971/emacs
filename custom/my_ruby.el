@@ -19,3 +19,7 @@
   :config
   (add-hook 'enh-ruby-mode-hook 'ruby-refactor-mode-launch)
   )
+
+(use-package inf-ruby
+  :config
+  (setq inf-ruby-default-implementation "pry")
