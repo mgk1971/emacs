@@ -32,6 +32,7 @@
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "http://melpa.org/packages/"))))
  '(scroll-bar-mode nil)
+ '(sentence-end-double-space nil)
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
  '(url-cookie-file "c:/Users/d032297/.emacs.d/url/cookies")
