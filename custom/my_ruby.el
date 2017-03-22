@@ -20,6 +20,10 @@
   (add-hook 'enh-ruby-mode-hook 'ruby-refactor-mode-launch)
   )
 
+;; For the foollowing setting you need a ~/.pryrc file:
+; Pry.config.correct_indent = false if ENV["INSIDE_EMACS"]
+; Pry.config.color = true if ENV["INSIDE_EMACS"]
 (use-package inf-ruby
   :config
   (setq inf-ruby-default-implementation "pry")
+  )
