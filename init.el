@@ -9,7 +9,7 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(company-global-modes (quote (not inf-ruby)))
+ '(company-global-modes (quote (not inf-ruby-mode)))
  '(custom-enabled-themes (quote (leuven)))
  '(custom-safe-themes
    (quote
