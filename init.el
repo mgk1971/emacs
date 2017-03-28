@@ -80,6 +80,8 @@
 
 (use-package magit
   :ensure t
+  :config
+  (setenv "GIT_ASKPASS" "git-gui--askpass")
   )
 
 (use-package linum-relative
