@@ -50,6 +50,7 @@
   (require 'use-package))
 
 (load "my_org")
+(load "my_markdown")
 (load "my_helm")
 ;;(load "my_evil")
 ;;(load "my_ido")
