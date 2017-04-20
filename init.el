@@ -15,7 +15,6 @@
    (quote
     ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" default)))
  '(delete-selection-mode nil)
- '(dired-dwim-target t)
  '(grep-find-ignored-directories
    (quote
     ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".DS_Store")))
@@ -48,6 +47,7 @@
 
 (eval-when-compile
   (require 'use-package))
+
 
 (load "my_org")
 (load "my_markdown")
