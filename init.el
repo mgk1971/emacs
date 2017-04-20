@@ -48,7 +48,7 @@
 (eval-when-compile
   (require 'use-package))
 
-
+(load "my_dired")
 (load "my_org")
 (load "my_markdown")
 (load "my_helm")
