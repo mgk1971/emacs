@@ -2,6 +2,7 @@
 
 ;;guess default target directory
 (setq dired-dwim-target t)
+(setq dired-recursive-deletes (quote always))
 
 ;;narrow dired to match filter
 (use-package dired-narrow
