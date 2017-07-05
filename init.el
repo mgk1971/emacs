@@ -73,10 +73,3 @@
   :ensure t
   )
 
-(use-package linum-relative
-  :ensure t
-  :config
-  (linum-relative-global-mode 1)
-  (setq linum-relative-current-symbol "")
-  )
-
