@@ -62,7 +62,7 @@
 (load "my_org")
 (load "my_markdown")
 (load "my_helm")
-;;(load "my_evil")
+(load "my_evil")
 ;;(load "my_ido")
 (load "my_projectile")
 (load "my_ruby")

@@ -12,6 +12,8 @@
   :ensure t
   :config
   (add-hook 'enh-ruby-mode-hook 'robe-mode)
+  (eval-after-load 'company
+    '(push 'company-robe company-backends))
   )
 
 (use-package ruby-refactor
@@ -24,6 +26,12 @@
   :ensure t
   :config
   (add-hook 'enh-ruby-mode-hook 'ruby-electric-mode)
+  )
+
+(use-package ruby-test-mode
+  :ensure t
+  :config
+  (add-hook 'enh-ruby-mode-hook 'ruby-test-mode)
   )
 
 ;; For the foollowing setting you need a ~/.pryrc file:
