@@ -34,7 +34,7 @@
   (add-hook 'enh-ruby-mode-hook 'ruby-test-mode)
   )
 
-;; For the foollowing setting you need a ~/.pryrc file:
+;; For the following setting you need a ~/.pryrc file:
 ; Pry.config.correct_indent = false if ENV["INSIDE_EMACS"]
 ; Pry.config.color = true if ENV["INSIDE_EMACS"]
 (use-package inf-ruby
@@ -42,3 +42,9 @@
   (setq inf-ruby-default-implementation "pry")
   )
 
+;; lintner for ruby
+(use-package rubocop
+  :ensure t
+  :config
+  (add-hook 'enh-ruby-mode-hook 'rubocop-mode)
+  )
