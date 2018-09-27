@@ -1,3 +1,10 @@
+;;; init.el --- init.el --- Initialization file for Emacs
+
+;;; Commentary:
+;;  Emacs Startup File
+
+;;; Code:
+
 (package-initialize)
 
 (custom-set-variables
@@ -64,12 +71,25 @@
 (use-package ag
   :ensure t)
 
+;; complete any languages
 (use-package company
   :ensure t
   :config
   (global-company-mode 1))
 
+;; Git interface
 (use-package magit
   :ensure t
   )
 
+;; Syntax checking
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode)
+  )
+
+
+
+(provide 'init)
+
+;;; init.el ends here
