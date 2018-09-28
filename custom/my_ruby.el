@@ -12,6 +12,8 @@
   :ensure t
   :config
   (add-hook 'enh-ruby-mode-hook 'robe-mode)
+  (eval-after-load 'company
+    '(push 'company-robe company-backends))
   )
 
 (use-package ruby-refactor
@@ -20,10 +22,29 @@
   (add-hook 'enh-ruby-mode-hook 'ruby-refactor-mode-launch)
   )
 
-;; For the foollowing setting you need a ~/.pryrc file:
+(use-package ruby-electric
+  :ensure t
+  :config
+  (add-hook 'enh-ruby-mode-hook 'ruby-electric-mode)
+  )
+
+(use-package ruby-test-mode
+  :ensure t
+  :config
+  (add-hook 'enh-ruby-mode-hook 'ruby-test-mode)
+  )
+
+;; For the following setting you need a ~/.pryrc file:
 ; Pry.config.correct_indent = false if ENV["INSIDE_EMACS"]
 ; Pry.config.color = true if ENV["INSIDE_EMACS"]
 (use-package inf-ruby
   :config
   (setq inf-ruby-default-implementation "pry")
+  )
+
+;; lintner for ruby
+(use-package rubocop
+  :ensure t
+  :config
+  (add-hook 'enh-ruby-mode-hook 'rubocop-mode)
   )
