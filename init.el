@@ -1,3 +1,10 @@
+;;; init.el --- init.el --- Initialization file for Emacs
+
+;;; Commentary:
+;;  Emacs Startup File
+
+;;; Code:
+
 ;; The following line is necessary for package magit.el on windows machine
 ;; It sets the language to unicode
 (set-language-environment "UTF-8")
@@ -31,6 +38,9 @@
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "http://melpa.org/packages/"))))
+ '(package-selected-packages
+   (quote
+    (helm-projectile projectile flycheck magit company ag yaml-mode rubocop ruby-test-mode ruby-electric ruby-refactor robe enh-ruby-mode helm-ag use-package powerline-evil markdown-toc helm evil-surround dired-narrow)))
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(tool-bar-mode nil)
@@ -74,14 +84,27 @@
 (use-package ag
   :ensure t)
 
+;; complete any languages
 (use-package company
   :ensure t
   :config
   (global-company-mode 1))
 
+;; Git interface
 (use-package magit
   :ensure t
   :config
   (setenv "GIT_ASKPASS" "git-gui--askpass")
   )
 
+;; Syntax checking
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode)
+  )
+
+
+
+(provide 'init)
+
+;;; init.el ends here
