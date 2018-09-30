@@ -38,6 +38,9 @@
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "http://melpa.org/packages/"))))
+ '(package-selected-packages
+   (quote
+    (helm-projectile projectile flycheck magit company ag yaml-mode rubocop ruby-test-mode ruby-electric ruby-refactor robe enh-ruby-mode helm-ag use-package powerline-evil markdown-toc helm evil-surround dired-narrow)))
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(tool-bar-mode nil)
