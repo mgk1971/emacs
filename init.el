@@ -91,7 +91,8 @@
   :init (global-flycheck-mode)
   )
 
-
+;; tail log files
+(add-to-list 'auto-mode-alist '("\\.log\\'" . auto-revert-tail-mode))
 
 (provide 'init)
 
