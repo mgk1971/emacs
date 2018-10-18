@@ -1,5 +1,8 @@
 ;;Settings for dired
 
+;;Enable dired-jump keyboard short cut
+(require 'dired-x)
+
 ;;guess default target directory
 (setq dired-dwim-target t)
 (setq dired-recursive-deletes (quote always))

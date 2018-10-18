@@ -1,3 +1,10 @@
+;;; init.el --- init.el --- Initialization file for Emacs
+
+;;; Commentary:
+;;  Emacs Startup File
+
+;;; Code:
+
 (package-initialize)
 
 (custom-set-variables
@@ -19,11 +26,15 @@
    (quote
     ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".DS_Store")))
  '(inhibit-startup-screen t)
+ '(initial-buffer-choice (quote eshell))
  '(mark-even-if-inactive t)
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "http://melpa.org/packages/"))))
+ '(package-selected-packages
+   (quote
+    (helm-projectile projectile flycheck magit company ag yaml-mode rubocop ruby-test-mode ruby-electric ruby-refactor robe enh-ruby-mode helm-ag use-package powerline-evil markdown-toc helm evil-surround dired-narrow)))
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(tool-bar-mode nil)
@@ -65,12 +76,26 @@
 (use-package ag
   :ensure t)
 
+;; complete any languages
 (use-package company
   :ensure t
   :config
   (global-company-mode 1))
 
+;; Git interface
 (use-package magit
   :ensure t
   )
 
+;; Syntax checking
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode)
+  )
+
+;; tail log files
+(add-to-list 'auto-mode-alist '("\\.log\\'" . auto-revert-tail-mode))
+
+(provide 'init)
+
+;;; init.el ends here

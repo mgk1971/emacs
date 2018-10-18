@@ -29,13 +29,28 @@
   (define-key evil-insert-state-map (kbd "C-d") nil)
   (define-key evil-insert-state-map (kbd "C-k") nil)
 
-  )
+  ;; Prevent overwriting of RET, SPC, TAB in insert mode
+  (defun my-move-key (keymap-from keymap-to key)
+    "Moves key binding from one keymap to another, deleting from the old location. "
+    (define-key keymap-to key (lookup-key keymap-from key))
+    (define-key keymap-from key nil))
+  (my-move-key evil-motion-state-map evil-normal-state-map (kbd "RET"))
+  (my-move-key evil-motion-state-map evil-normal-state-map " ")
+  (my-move-key evil-motion-state-map evil-normal-state-map (kbd "TAB"))
+ )
 
 ;; Evil surround
 ;; see https://github.com/timcharper/evil-surround
-
 (use-package evil-surround
   :ensure t
   :config
   (global-evil-surround-mode 1)
+  )
+
+;; Evel powerline
+(use-package powerline-evil
+  :ensure t
+  :config
+  (powerline-evil-vim-color-theme)
+  (display-time-mode t)
   )
