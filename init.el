@@ -29,10 +29,7 @@
    (quote
     ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".DS_Store")))
  '(inhibit-startup-screen t)
- '(magit-repository-directories
-   (quote
-    (("~/.emacs.d" . 0)
-     ("C:\\Canberra\\scripts"))))
+ '(initial-buffer-choice (quote eshell))
  '(mark-even-if-inactive t)
  '(package-archives
    (quote
@@ -103,7 +100,8 @@
   :init (global-flycheck-mode)
   )
 
-
+;; tail log files
+(add-to-list 'auto-mode-alist '("\\.log\\'" . auto-revert-tail-mode))
 
 (provide 'init)
 
