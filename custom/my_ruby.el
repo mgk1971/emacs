@@ -43,8 +43,14 @@
   )
 
 ;; lintner for ruby
+; sudo gem install rubocop
 (use-package rubocop
   :ensure t
   :config
   (add-hook 'enh-ruby-mode-hook 'rubocop-mode)
+  )
+
+;; rspec mode
+(use-package rspec-mode
+  :ensure t
   )

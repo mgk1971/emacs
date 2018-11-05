@@ -13,5 +13,6 @@
 
 (add-hook 'compilation-filter-hook
           #'endless/colorize-compilation)
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 ;;; my_compilation.el ends here
