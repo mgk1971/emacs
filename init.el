@@ -17,7 +17,7 @@
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(company-global-modes (quote (not inf-ruby-mode)))
- '(custom-enabled-themes (quote (leuven)))
+ '(custom-enabled-themes (quote (tango-dark)))
  '(custom-safe-themes
    (quote
     ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" default)))
@@ -34,11 +34,13 @@
      ("melpa" . "http://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (helm-projectile projectile flycheck magit company ag yaml-mode rubocop ruby-test-mode ruby-electric ruby-refactor robe enh-ruby-mode helm-ag use-package powerline-evil markdown-toc helm evil-surround dired-narrow)))
+    (eshell-prompt-extras helm-projectile projectile flycheck magit company ag yaml-mode rubocop ruby-test-mode ruby-electric ruby-refactor robe enh-ruby-mode helm-ag use-package powerline-evil markdown-toc helm evil-surround dired-narrow)))
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(tool-bar-mode nil)
- '(uniquify-buffer-name-style (quote post-forward) nil (uniquify)))
+ '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
+ '(url-cookie-file "c:/Users/d032297/.emacs.d/url/cookies")
+ '(url-history-file "c:/Users/d032297/.emacs.d/url/history"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -68,6 +70,7 @@
 (load "my_projectile")
 (load "my_ruby")
 (load "my_yaml")
+(load "my_compilation")
 
 ;; ag is the silver searcher
 ;; see http://agel.readthedocs.io
@@ -92,6 +95,14 @@
   :init (global-flycheck-mode)
   )
 
+;; e-shell
+(use-package eshell-prompt-extras
+  :ensure t
+  :config
+  (with-eval-after-load "esh-opt"
+  (autoload 'epe-theme-lambda "eshell-prompt-extras")
+  (setq eshell-highlight-prompt nil
+        eshell-prompt-function 'epe-theme-lambda)))
 ;; tail log files
 (add-to-list 'auto-mode-alist '("\\.log\\'" . auto-revert-tail-mode))
 
