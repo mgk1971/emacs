@@ -17,7 +17,7 @@
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(company-global-modes (quote (not inf-ruby-mode)))
- '(custom-enabled-themes (quote (leuven)))
+ '(custom-enabled-themes (quote (tango-dark)))
  '(custom-safe-themes
    (quote
     ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" default)))
